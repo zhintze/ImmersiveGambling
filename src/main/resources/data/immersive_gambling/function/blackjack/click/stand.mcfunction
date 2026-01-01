@@ -1,0 +1,1 @@
+function immersive_gambling:blackjack/click/execute_as_type_in_group {type: "stand", cmd: "function immersive_gambling:blackjack/stand/start"}

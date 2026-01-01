@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SCS",
+    "LRL",
+    "SCS"
+  ],
+  "key": {
+    "S": { "item": "immersiveengineering:slag" },
+    "C": { "item": "immersiveengineering:coal_coke" },
+    "L": { "tag": "c:ingots/lead" },
+    "R": { "tag": "c:dusts/redstone" }
+  },
+  "result": {
+    "id": "immersive_gambling:nickel_coin_die"
+  }
+}

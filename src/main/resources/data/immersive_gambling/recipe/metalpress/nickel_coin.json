@@ -1,0 +1,11 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "energy": 1000,
+  "input": {
+    "item": "immersive_gambling:annealed_nickel_blank"
+  },
+  "mold": "immersive_gambling:nickel_coin_die",
+  "result": {
+    "id": "immersive_gambling:nickel_coin"
+  }
+}

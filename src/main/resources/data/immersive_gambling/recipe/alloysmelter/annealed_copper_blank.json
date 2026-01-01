@@ -1,0 +1,13 @@
+{
+  "type": "immersiveengineering:alloy",
+  "input0": {
+    "item": "immersive_gambling:copper_blank"
+  },
+  "input1": {
+    "item": "immersiveengineering:dust_coke"
+  },
+  "result": {
+    "id": "immersive_gambling:annealed_copper_blank"
+  },
+  "time": 100
+}

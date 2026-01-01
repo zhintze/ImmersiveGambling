@@ -1,0 +1,18 @@
+{
+  "item.immersive_gambling.slot_machine": "Slot Machine",
+  "item.immersive_gambling.blackjack_table": "Blackjack Table",
+  "item.immersive_gambling.copper_coin": "Copper Coin",
+  "item.immersive_gambling.nickel_coin": "Nickel Coin",
+  "item.immersive_gambling.silver_coin": "Silver Coin",
+  "item.immersive_gambling.copper_blank": "Copper Blank",
+  "item.immersive_gambling.nickel_blank": "Nickel Blank",
+  "item.immersive_gambling.silver_blank": "Silver Blank",
+  "item.immersive_gambling.annealed_copper_blank": "Annealed Copper Blank",
+  "item.immersive_gambling.annealed_nickel_blank": "Annealed Nickel Blank",
+  "item.immersive_gambling.annealed_silver_blank": "Annealed Silver Blank",
+  "item.immersive_gambling.blank_mold": "Coin Blank Mold",
+  "item.immersive_gambling.copper_coin_die": "Copper Coin Die",
+  "item.immersive_gambling.nickel_coin_die": "Nickel Coin Die",
+  "item.immersive_gambling.silver_coin_die": "Silver Coin Die",
+  "itemGroup.immersive_gambling.gambling_tab": "Immersive Gambling"
+}

@@ -1,0 +1,3 @@
+tellraw @s ["",{"text":"\nYou can't put that into the slot machine! ","color":"red"},{"text":"Are you crazy?","italic":true,"color":"red"},{"text":"\n\n"},{"text":"Here is what you ","color":"green"},{"text":"CAN","bold":true,"color":"green"},{"text":" gamble:","color":"green"},{"text":"\n\n"},{"text":"Copper Coin","color":"#B87333"},{"text":" (1x), ","color":"gray"},{"text":"Nickel Coin","color":"#9A9A9A"},{"text":" (2x), ","color":"gray"},{"text":"Silver Coin","color":"#D0D0D0"},{"text":" (3x)","color":"gray"}]
+playsound minecraft:block.note_block.didgeridoo player @s ~ ~ ~ 1 0
+damage @s 0.5 minecraft:mob_attack by @s

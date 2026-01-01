@@ -1,0 +1,12 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "energy": 1600,
+  "input": {
+    "tag": "c:ingots/nickel"
+  },
+  "mold": "immersive_gambling:blank_mold",
+  "result": {
+    "count": 4,
+    "id": "immersive_gambling:nickel_blank"
+  }
+}

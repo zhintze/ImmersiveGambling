@@ -1,0 +1,11 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "energy": 1200,
+  "input": {
+    "item": "immersive_gambling:annealed_silver_blank"
+  },
+  "mold": "immersive_gambling:silver_coin_die",
+  "result": {
+    "id": "immersive_gambling:silver_coin"
+  }
+}

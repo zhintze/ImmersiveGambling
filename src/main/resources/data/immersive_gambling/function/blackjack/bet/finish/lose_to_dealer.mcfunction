@@ -1,0 +1,1 @@
+execute on passengers run function immersive_gambling:blackjack/bet/finish/lose

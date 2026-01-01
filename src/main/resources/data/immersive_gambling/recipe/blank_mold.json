@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "STS",
+    "T T",
+    "STS"
+  ],
+  "key": {
+    "S": { "item": "immersiveengineering:slag" },
+    "T": { "item": "immersiveengineering:treated_wood_horizontal" }
+  },
+  "result": {
+    "id": "immersive_gambling:blank_mold"
+  }
+}

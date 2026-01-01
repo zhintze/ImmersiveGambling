@@ -1,0 +1,2 @@
+function immersive_gambling:blackjack/click/execute_as_type_in_table {type: "dealer_card_slot", cmd: "function immersive_gambling:blackjack/card/reset_flip"}
+function immersive_gambling:blackjack/click/execute_as_type_in_table {type: "card_slot", cmd: "function immersive_gambling:blackjack/card/reset_flip"}

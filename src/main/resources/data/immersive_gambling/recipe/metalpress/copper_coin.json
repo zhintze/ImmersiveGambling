@@ -1,0 +1,11 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "energy": 800,
+  "input": {
+    "item": "immersive_gambling:annealed_copper_blank"
+  },
+  "mold": "immersive_gambling:copper_coin_die",
+  "result": {
+    "id": "immersive_gambling:copper_coin"
+  }
+}

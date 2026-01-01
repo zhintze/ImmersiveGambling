@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iti",
+    "gbg",
+    "iri"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_block"
+    },
+    "t": {
+      "item": "minecraft:turtle_helmet"
+    },
+    "b": {
+      "item": "minecraft:bell"
+    },
+    "g": {
+      "item": "minecraft:gold_block"
+    },
+    "r": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "id": "immersive_gambling:slot_machine",
+    "count": 1
+  }
+}
