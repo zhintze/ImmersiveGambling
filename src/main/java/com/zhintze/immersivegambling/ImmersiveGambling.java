@@ -1,5 +1,6 @@
 package com.zhintze.immersivegambling;
 
+import com.zhintze.immersivegambling.config.ClientConfig;
 import com.zhintze.immersivegambling.item.BlackjackTableItem;
 import com.zhintze.immersivegambling.item.SlotMachineItem;
 import net.minecraft.core.registries.Registries;
@@ -8,7 +9,9 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -78,8 +81,11 @@ public class ImmersiveGambling {
                 output.accept(ANNEALED_SILVER_BLANK.get());
             }).build());
 
-    public ImmersiveGambling(IEventBus modEventBus) {
+    public ImmersiveGambling(IEventBus modEventBus, ModContainer modContainer) {
         ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
+
+        // Register client config
+        modContainer.registerConfig(ModConfig.Type.CLIENT, ClientConfig.SPEC);
     }
 }
