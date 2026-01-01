@@ -1,4 +1,3 @@
-say placed blackjack
 execute at @s positioned 0.0 0 0.0 rotated ~45 0 positioned ^ ^ ^-0.5 align xz facing -0.5 0 -0.5 rotated ~-45 0 positioned as @s run tp @s ~ ~ ~ ~ ~
 
 execute at @s unless block ^1 ^ ^ air run return run function immersive_gambling:blackjack/break

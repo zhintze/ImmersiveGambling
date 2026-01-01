@@ -1,13 +1,21 @@
-#execute as @n[tag=clicked] if items entity @s weapon.mainhand #immersive_gambling:cant_gamble run return run tellraw @s {"color":"red","text":"You cannot gamble this!"}
+# Place or add to bet on the blackjack table
+# Supports stacking up to 10x max_stack_size
+
+# Check player is holding an item
 execute as @n[tag=clicked] unless items entity @s weapon.mainhand * run return run tellraw @s {"color":"red","text":"You must be holding an item!"}
 
-execute unless data entity @s item{count:1,id:"minecraft:barrier"} run function immersive_gambling:blackjack/bet/remove_bet_item
-data modify entity @s item set from entity @n[tag=clicked] SelectedItem
-item modify entity @n[tag=clicked] weapon.mainhand immersive_gambling:remove1
+# Get held item count
+execute store result score #held_count ig.math_temp run data get entity @n[tag=clicked] SelectedItem.count
 
-data modify entity @s item.count set value 1
+# Get max stack size (default 64 if not specified)
+execute store result score #max_stack ig.math_temp run data get entity @n[tag=clicked] SelectedItem.components."minecraft:max_stack_size"
+execute if score #max_stack ig.math_temp matches 0 run scoreboard players set #max_stack ig.math_temp 64
 
-playsound minecraft:entity.pig.saddle player @a ~ ~ ~ 1 2
-particle minecraft:composter ~ ~-0.02 ~ 0.1 0.1 0.1 0 3
+# Calculate max bet (10x max stack size)
+scoreboard players operation #max_bet ig.math_temp = #max_stack ig.math_temp
+scoreboard players set #multiplier ig.math_temp 10
+scoreboard players operation #max_bet ig.math_temp *= #multiplier ig.math_temp
 
-execute on vehicle run tag @s add 777.has_bet
+# Check if bet spot is empty (has barrier placeholder)
+execute if data entity @s item{id:"minecraft:barrier"} run function immersive_gambling:blackjack/bet/place_new_bet
+execute unless data entity @s item{id:"minecraft:barrier"} run function immersive_gambling:blackjack/bet/add_to_bet
