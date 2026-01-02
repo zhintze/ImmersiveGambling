@@ -2,17 +2,17 @@
 execute store result score @s ig.odds run random value 1..1000
 
 # Determine win tier based on odds:
-# 1-300 (30%) = Small win (tier 1)
-# 301-400 (10%) = Medium win (tier 2)
-# 401-410 (1%) = Large win (tier 3)
-# 411 (0.1%) = Jackpot (tier 4)
-# 412-1000 (58.9%) = Loss (tier 0)
+# 1-2 (0.2%) = Jackpot (tier 4) - 777
+# 3-12 (1.0%) = Large win (tier 3) - LEMON
+# 13-72 (6.0%) = Medium win (tier 2) - CHERRY/PLUM
+# 73-192 (12.0%) = Small win (tier 1) - BAR
+# 193-1000 (80.8%) = Loss (tier 0)
 
 scoreboard players set @s ig.win_tier 0
-execute if score @s ig.odds matches 1..300 run scoreboard players set @s ig.win_tier 1
-execute if score @s ig.odds matches 301..400 run scoreboard players set @s ig.win_tier 2
-execute if score @s ig.odds matches 401..410 run scoreboard players set @s ig.win_tier 3
-execute if score @s ig.odds matches 411 run scoreboard players set @s ig.win_tier 4
+execute if score @s ig.odds matches 1..2 run scoreboard players set @s ig.win_tier 4
+execute if score @s ig.odds matches 3..12 run scoreboard players set @s ig.win_tier 3
+execute if score @s ig.odds matches 13..72 run scoreboard players set @s ig.win_tier 2
+execute if score @s ig.odds matches 73..192 run scoreboard players set @s ig.win_tier 1
 
 execute store result score #rand_sound ig.bool run random value 1..4
 
