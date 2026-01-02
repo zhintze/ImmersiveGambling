@@ -2,6 +2,7 @@ package com.zhintze.immersivegambling;
 
 import com.zhintze.immersivegambling.config.ClientConfig;
 import com.zhintze.immersivegambling.item.BlackjackTableItem;
+import com.zhintze.immersivegambling.item.FoilItem;
 import com.zhintze.immersivegambling.item.SlotMachineItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -33,9 +34,12 @@ public class ImmersiveGambling {
     public static final DeferredItem<Item> COPPER_BLANK = ITEMS.registerSimpleItem("copper_blank");
     public static final DeferredItem<Item> NICKEL_BLANK = ITEMS.registerSimpleItem("nickel_blank");
     public static final DeferredItem<Item> SILVER_BLANK = ITEMS.registerSimpleItem("silver_blank");
-    public static final DeferredItem<Item> ANNEALED_COPPER_BLANK = ITEMS.registerSimpleItem("annealed_copper_blank");
-    public static final DeferredItem<Item> ANNEALED_NICKEL_BLANK = ITEMS.registerSimpleItem("annealed_nickel_blank");
-    public static final DeferredItem<Item> ANNEALED_SILVER_BLANK = ITEMS.registerSimpleItem("annealed_silver_blank");
+    public static final DeferredItem<Item> ANNEALED_COPPER_BLANK = ITEMS.register("annealed_copper_blank",
+            () -> new FoilItem(new Item.Properties()));
+    public static final DeferredItem<Item> ANNEALED_NICKEL_BLANK = ITEMS.register("annealed_nickel_blank",
+            () -> new FoilItem(new Item.Properties()));
+    public static final DeferredItem<Item> ANNEALED_SILVER_BLANK = ITEMS.register("annealed_silver_blank",
+            () -> new FoilItem(new Item.Properties()));
 
     // Tooling
     public static final DeferredItem<Item> BLANK_MOLD = ITEMS.registerSimpleItem("blank_mold");
